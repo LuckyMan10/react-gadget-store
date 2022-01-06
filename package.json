@@ -1,0 +1,16 @@
+{
+  "name": "react-gadget-store",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "linter": "cd ./frontend && npm run format && npm run lint",
+    "prepare": "husky install"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "husky": "^7.0.4"
+  }
+}
