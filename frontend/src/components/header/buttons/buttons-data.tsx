@@ -5,7 +5,7 @@ const buttons = [
     id: "1",
     key: "account-button",
     icon: <UserOutlined />,
-    text: "account"
+    text: "login"
   },
   {
     id: "2",
@@ -17,7 +17,7 @@ const buttons = [
     id: "3",
     key: "heart-button",
     icon: <HeartOutlined />,
-    text: "heart"
+    text: "favorite"
   }
 ];
 

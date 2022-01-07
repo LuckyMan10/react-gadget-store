@@ -47,9 +47,9 @@ const MainList: FC = () => {
 
   useEffect(() => {
     const pageHeight = document.documentElement.scrollHeight;
-    setPageSize(pageHeight)
-    console.log('pageHeight: ', pageHeight)
-  }, [])
+    setPageSize(pageHeight);
+    console.log("pageHeight: ", pageHeight);
+  }, []);
   const openButtonHandler = () => {
     if (!open) {
       setActiveItem("");

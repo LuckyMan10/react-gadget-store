@@ -1,6 +1,6 @@
 import { FC } from "react";
-import { MainList } from "components/MainList";
-import {MainItems} from 'components/MainItems';
+import { MainList } from "components/mainList";
+import { MainItems } from "components/mainItems";
 
 const Home: FC = () => {
   return (

@@ -1,7 +1,7 @@
 import { FC } from "react";
 import { Card } from "antd";
 import { data } from "./fakeData";
-import {StyledMainItems, MainItemsWrapper} from './style';
+import { StyledMainItems, MainItemsWrapper } from "./style";
 import { useNavigate } from "react-router-dom";
 import { appEnum } from "router/appRoutes";
 
@@ -9,8 +9,8 @@ const MainItems: FC = () => {
   const { Meta } = Card;
   const navigate = useNavigate();
   const mainItemsClickHandler = () => {
-    navigate(`${appEnum.PRODUCT}/3434-545-6`)
-  }
+    navigate(`${appEnum.PRODUCT}/3434-545-6`);
+  };
 
   return (
     <StyledMainItems>

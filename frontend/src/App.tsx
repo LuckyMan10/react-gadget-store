@@ -17,15 +17,14 @@ const App: FC = () => {
   const [emptyPageSize, setEmptyPageSize] = useState<number>(0);
   useEffect(() => {
     const size = window.innerHeight - (90 + 110);
-    setEmptyPageSize(size);
-    console.log(size);
+    setEmptyPageSize(size)
   }, []);
 
   return (
     <div>
       <Header />
       <StyledContent emptyPageSize={emptyPageSize}>
-      <Router />
+        <Router />
       </StyledContent>
       <Footer />
     </div>

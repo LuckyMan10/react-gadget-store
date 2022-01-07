@@ -1,4 +1,4 @@
-import Styled from 'styled-components';
+import Styled from "styled-components";
 
 const StyledMainItems = Styled.article`
     position: relative;
@@ -12,13 +12,13 @@ const StyledMainItems = Styled.article`
     .ant-card-meta-description {
         font-size: 22px;
     }
-`
+`;
 
 const MainItemsWrapper = Styled.div`
     display: flex;
     gap: 30px;
     flex-wrap: wrap;
     width: 90%;
-` 
+`;
 
-export {StyledMainItems, MainItemsWrapper}
+export { StyledMainItems, MainItemsWrapper };
