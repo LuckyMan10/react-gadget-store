@@ -1,4 +1,4 @@
-import { FC, useState, MouseEvent } from "react";
+import { FC, useState, MouseEvent, useEffect } from "react";
 import { Checkbox } from "antd";
 import { StyledList, CompanyList, Main, MainListWrapper } from "./style";
 import { OpenButton } from "./openButton";
@@ -36,13 +36,20 @@ const data = [
 
 const MainList: FC = () => {
   const [activeItem, setActiveItem] = useState<string | null>(null);
-  const [open, setOpen] = useState<boolean>(false);
+  const [open, setOpen] = useState<boolean>(true);
   const listClickHandler = (e: MouseEvent<HTMLUListElement>) => {
     const { id } = e.target as HTMLElement;
     if (id) {
       setActiveItem(id);
     }
   };
+  const [pageSize, setPageSize] = useState<number>(0);
+
+  useEffect(() => {
+    const pageHeight = document.documentElement.scrollHeight;
+    setPageSize(pageHeight)
+    console.log('pageHeight: ', pageHeight)
+  }, [])
   const openButtonHandler = () => {
     if (!open) {
       setActiveItem("");
@@ -54,7 +61,7 @@ const MainList: FC = () => {
   const plainOptions = ["Apple", "Pear", "Orange", "Banana", "Mango"];
 
   return (
-    <StyledList isOpen={open}>
+    <StyledList pageHeight={pageSize} isOpen={open}>
       <MainListWrapper>
         <ListHeader />
         <Main>

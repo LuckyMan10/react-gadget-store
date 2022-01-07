@@ -2,13 +2,15 @@ import Styled from "styled-components";
 
 type propsType = {
   isOpen: boolean;
+  pageHeight: number;
 };
 
 const StyledList = Styled.article<propsType>`
     position: absolute;
+    z-index: 5;
     left: 0;
-    top: 20vh;
-    height: 100%;
+    top: 90px;
+    height: ${(props) => props.pageHeight - 90}px;
     transform: ${(props) => (props.isOpen ? "translateX(-100%)" : "none")};
     transition: 0.3s;
     .content {
@@ -48,7 +50,9 @@ const MainListWrapper = Styled.div`
         font-size: 28px;
         text-align: center;
     }
-    position: relative;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 18vh;
     z-index: 5;
     border-top-right-radius: 10px;
     border-bottom-right-radius: 10px;
