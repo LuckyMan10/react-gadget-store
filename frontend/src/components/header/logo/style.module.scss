@@ -1,0 +1,26 @@
+.logo {
+  cursor: pointer;
+  min-width: 195px;
+  position: relative;
+  z-index: 49;
+  display: flex;
+  align-items: flex-end;
+  h1 {
+    width: 50%;
+    font-size: 25px;
+    font-weight: bold;
+    color: rgba(64, 178, 89, 1);
+    margin-bottom: 20px;
+    line-height: 28px;
+  }
+}
+
+.imageWrapper {
+  width: 101px;
+  height: 101px;
+  img {
+    position: absolute;
+    top: 0px;
+    left: 23px;
+  }
+}
