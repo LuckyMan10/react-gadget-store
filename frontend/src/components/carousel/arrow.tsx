@@ -1,6 +1,6 @@
 import { FC } from "react";
 import { CaretRightOutlined, CaretLeftOutlined } from "@ant-design/icons";
-import {StyledArrow} from './style';
+import { StyledArrow } from "./style";
 
 type Arrow = {
   type: string;

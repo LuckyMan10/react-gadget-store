@@ -20,7 +20,11 @@ const ProductCarousel: FC<ProductCarousel> = ({ sliderData }) => {
   return (
     <StyledCarousel>
       <Arrow type="prev" {...arrowProps} />
-      <Carousel showArrows={false} selectedItem={selectedItem} showStatus={false} showIndicators={false}>
+      <Carousel
+        showArrows={false}
+        selectedItem={selectedItem}
+        showStatus={false}
+        showIndicators={false}>
         {sliderData.map((image, index) => {
           return (
             <StyledSlide key={`slider-key-${index}`}>

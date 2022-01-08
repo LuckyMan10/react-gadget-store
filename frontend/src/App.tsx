@@ -17,7 +17,7 @@ const App: FC = () => {
   const [emptyPageSize, setEmptyPageSize] = useState<number>(0);
   useEffect(() => {
     const size = window.innerHeight - (90 + 110);
-    setEmptyPageSize(size)
+    setEmptyPageSize(size);
   }, []);
 
   return (

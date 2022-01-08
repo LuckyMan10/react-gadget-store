@@ -18,7 +18,7 @@ const StyledSlide = Styled.div`
     img {
         max-width: 400px;
     }
-`
+`;
 
 const StyledArrow = Styled.div`
     display: flex;
@@ -30,6 +30,6 @@ const StyledArrow = Styled.div`
         background: transparent;
         border: none;
     }
-`
+`;
 
 export { StyledCarousel, StyledSlide, StyledArrow };

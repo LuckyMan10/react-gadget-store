@@ -1,8 +1,8 @@
 import { FC, useState } from "react";
 import { StyledProduct, Wrapper } from "./style";
 import { ProductCarousel } from "components/carousel";
-import {Breadcrumbs} from "components/breadcrumb";
-import {PriceProductBlock} from "components/priceProductBlock";
+import { Breadcrumbs } from "components/breadcrumb";
+import { PriceProductBlock } from "components/priceProductBlock";
 
 const sliderData = [
   "https://i.pcmag.com/imagery/reviews/067kOgD0fzK0RWW0ojgqGzQ-5.fit_lim.size_625x365.v1634914233.jpg",
@@ -18,11 +18,11 @@ const breadCrumbData = [
     title: "3434-545-6",
     path: "/product"
   }
-]
+];
 const Product: FC = () => {
   return (
     <StyledProduct>
-      <Breadcrumbs breadCrumbData={breadCrumbData}/>
+      <Breadcrumbs breadCrumbData={breadCrumbData} />
       <Wrapper>
         <ProductCarousel sliderData={sliderData} />
         <PriceProductBlock />
