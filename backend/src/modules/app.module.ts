@@ -1,15 +1,12 @@
 import { Module } from "@nestjs/common";
-import { ConfigModule } from "@nestjs/config";
 import { MongooseModule } from "@nestjs/mongoose";
-import { AuthModule } from "./auth.module";
+import { navSchema } from "schemas/nav-bar.schema";
+import { AppController } from "controllers/app.controller";
+import { AppService } from "services/app.service";
 
 @Module({
-  imports: [
-    ConfigModule.forRoot(),
-    MongooseModule.forRoot(process.env.DB_URL),
-    AuthModule,
-  ],
-  controllers: [],
-  providers: [],
+  imports: [MongooseModule.forFeature([{ name: "NavBar", schema: navSchema }])],
+  controllers: [AppController],
+  providers: [AppService],
 })
 export class AppModule {}

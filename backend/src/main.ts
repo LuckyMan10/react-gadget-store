@@ -1,10 +1,10 @@
 import { NestFactory } from "@nestjs/core";
-import { AppModule } from "./modules/app.module";
+import { RootModule } from "./modules/root.module";
 import { ValidationPipe } from "@nestjs/common";
 import * as cookieParser from "cookie-parser";
 
 async function bootstrap() {
-  const app = await NestFactory.create(AppModule);
+  const app = await NestFactory.create(RootModule);
   app.enableCors({
     origin: true,
     methods: "GET,HEAD,PUT,PATCH,POST,DELETE,OPTIONS",

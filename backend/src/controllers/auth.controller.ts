@@ -11,7 +11,10 @@ import { ErrorsService } from "services/errors.service";
 @Controller("auth")
 @Injectable()
 export class AuthController {
-  constructor(private authService: AuthService, private readonly errorsService: ErrorsService) {}
+  constructor(
+    private readonly authService: AuthService,
+    private readonly errorsService: ErrorsService,
+  ) {}
 
   @Post("registration")
   async registration(
@@ -50,6 +53,7 @@ export class AuthController {
       return new HttpException({ message: e }, HttpStatus.UNAUTHORIZED);
     }
   }
+
   @Get("logout")
   async logout(@Res({ passthrough: true }) response: Response, @Req() request: Request) {
     try {
